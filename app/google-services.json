@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "689960023530",
+    "project_id": "pam-firebase-76bdb",
+    "storage_bucket": "pam-firebase-76bdb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689960023530:android:12b8a420892fb288596e93",
+        "android_client_info": {
+          "package_name": "com.example.questfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkxPgQlI16Q701o2Cbn6P2RGHKtX6vQFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
