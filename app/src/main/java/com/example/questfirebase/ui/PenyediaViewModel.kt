@@ -6,12 +6,14 @@ import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.questfirebase.MahasiswaApp
 import com.example.questfirebase.ui.home.viewmodel.HomeViewModel
+import com.example.questfirebase.ui.home.viewmodel.InsertViewModel
 
 object PenyediaViewModel {
     val Factory = viewModelFactory {
         initializer { HomeViewModel(MahasiswaApp().container.repositoryMhs
-        )
-        }
+        ) }
+        initializer { InsertViewModel(MahasiswaApp().container.repositoryMhs
+        ) }
     }
 }
 
