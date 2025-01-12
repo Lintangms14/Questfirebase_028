@@ -2,6 +2,11 @@ package com.example.questfirebase.ui.home.viewmodel
 
 import com.example.questfirebase.model.mahasiswa
 
+data class InsertUiState(
+    val insertUiEvent: MahasiswaEvent = MahasiswaEvent(),
+    val isEntryValid: FormErrorState = FormErrorState(),
+)
+
 data class FormErrorState(
     val nim: String? = null,
     val nama: String? = null,
