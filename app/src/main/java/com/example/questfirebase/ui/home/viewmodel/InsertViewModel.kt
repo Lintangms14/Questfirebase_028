@@ -33,6 +33,9 @@ class InsertViewModel(
             alamat = if(event.alamat.isEmpty()) "Alamat Tidak Boleh Kosong" else null,
             kelas = if(event.kelas.isEmpty()) "Kelas Tidak Boleh Kosong" else null,
             angkatan = if(event.angkatan.isEmpty()) "Angkatan Tidak Boleh Kosong" else null,
+            judulSkripsi = if(event.judulSkripsi.isEmpty()) "Judul SKripsi Tidak Boleh Kosong" else null,
+            dosenPembimbing1 = if(event.dosenPembimbing1.isEmpty()) "Dosen Pembimbing 1 Tidak Boleh Kosong" else null,
+            dosenPembimbing2 = if(event.dosenPembimbing2.isEmpty()) "Dosen Pembimbing 2 Tidak Boleh Kosong" else null,
         )
         uiEvent = uiEvent.copy(isEntryValid = errorState)
         return errorState.isValid()
@@ -82,11 +85,16 @@ data class FormErrorState(
     val jenisKelamin: String? = null,
     val alamat: String? = null,
     val kelas: String? = null,
-    val angkatan: String? = null
+    val angkatan: String? = null,
+    val judulSkripsi: String? = null,
+    val dosenPembimbing1: String? = null,
+    val dosenPembimbing2: String? = null
 ){
     fun isValid():Boolean{
         return nim == null && nama == null && jenisKelamin == null &&
-                alamat == null && kelas == null && angkatan == null
+                alamat == null && kelas == null && angkatan == null &&
+                judulSkripsi == null && dosenPembimbing1 == null &&
+                dosenPembimbing2 == null
     }
 }
 
@@ -96,7 +104,10 @@ data class MahasiswaEvent(
     val jenisKelamin: String = "",
     val alamat: String = "",
     val kelas: String = "",
-    val angkatan: String = ""
+    val angkatan: String = "",
+    val judulSkripsi: String = "",
+    val dosenPembimbing1: String = "",
+    val dosenPembimbing2: String = ""
 )
 
 fun MahasiswaEvent.toMhsModel(): mahasiswa = mahasiswa(
@@ -105,5 +116,8 @@ fun MahasiswaEvent.toMhsModel(): mahasiswa = mahasiswa(
     jenisKelamin = jenisKelamin,
     alamat = alamat,
     kelas = kelas,
-    angkatan = angkatan
+    angkatan = angkatan,
+    judulSkripsi = judulSkripsi,
+    dosenPembimbing1 = dosenPembimbing1,
+    dosenPembimbing2 = dosenPembimbing2
 )
